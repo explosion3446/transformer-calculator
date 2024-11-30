@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafo Hesaplama Aracı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trafo Hesaplama Aracı</h1>
+        <form id="transformerForm">
+            <label for="va">Trafo Gücü (VA):</label>
+            <input type="number" id="va" placeholder="VA değeri giriniz">
+
+            <label for="v1">Primer Voltajı (V):</label>
+            <input type="number" id="v1" placeholder="Primer voltajı giriniz">
+
+            <label for="v2">Seconder Voltajı (V):</label>
+            <input type="number" id="v2" placeholder="Seconder voltajı giriniz">
+
+            <label for="frekans">Frekans (Hz):</label>
+            <input type="number" id="frekans" placeholder="Frekans giriniz">
+
+            <label for="akimYoğunlugu">Akım Yoğunluğu (J):</label>
+            <input type="number" id="akimYoğunlugu" placeholder="Akım yoğunluğu giriniz">
+
+            <label for="b1">Karkas b1 (cm):</label>
+            <input type="number" id="b1" placeholder="Karkas b1 giriniz">
+
+            <label for="h1">Karkas h1 (cm):</label>
+            <input type="number" id="h1" placeholder="Karkas h1 giriniz">
+
+            <button type="button" id="hesaplaBtn">Hesapla</button>
+        </form>
+
+        <div id="sonuclar" style="display:none;">
+            <p>Primer Tur Sayısı: <span id="primerTur"></span></p>
+            <p>Seconder Tur Sayısı: <span id="seconderTur"></span></p>
+            <p>Primer Tel: <span id="primerTel"></span> mm²</p>
+            <p>Seconder Tel: <span id="seconderTel"></span> mm²</p>
+        </div>
+
+        <div id="uyari" style="display:none; color:red;">
+            <p>Lütfen tüm değerleri giriniz!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
